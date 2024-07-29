@@ -1,6 +1,9 @@
 .mainPage {
     background-color: rgb(149, 167, 201);
     font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
 }
 
 * {
@@ -13,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 20px;
 }
 
 .label,
@@ -20,6 +24,7 @@
     display: block;
     width: 100%;
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 .label {
@@ -27,9 +32,25 @@
 }
 
 .input {
-    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #5ece64;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0f5b13;
 }
 
 /* Styles for desktop */
@@ -38,7 +59,6 @@
         display: flex;
         justify-content: space-between;
         height: 100vh;
-        margin: 0;
     }
 
     #formSection {
@@ -57,18 +77,11 @@
         margin-left: 40px;
     }
 
-    .label,
-    .input {
-        width: 100%;
-    }
-
     .button {
-        width: 100%;
         padding: 10px;
+        border-radius: 15px;
+        margin-top: 20px;
         background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
     }
 
     .button:hover {
@@ -79,7 +92,23 @@
 /* Styles for tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
     .mainPage {
-        background-color: bisque;
+        font-size: 18px;
+    }
+
+    .pageHead {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner {
+        border-top: 2px solid white;
+        color: white;
+    }
+
+    #bannerMessage {
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
     }
 
     #formSection {
@@ -88,7 +117,18 @@
 
     .label,
     .input {
-        width: 70%;
+        width: 100%;
+    }
+
+    .button {
+        width: 80%;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    .button:hover {
+        background-color: #0f5b13;
     }
 }
 
@@ -96,17 +136,11 @@
 @media (max-width: 767px) {
     .mainPage {
         background-color: grey;
-    }
-
-    #formSection {
-        padding: 30px;
-        width: 100%;
-        /* Ensure full width on phones */
-        align-items: center;
+        font-size: 16px;
     }
 
     #introSection {
-        margin-top: 50px;
+        padding: 20px;
     }
 
     .pageHead {
@@ -117,35 +151,28 @@
 
     #banner {
         color: white;
+        border-top: 2px solid white;
+
     }
+
+    #bannerMessage {
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+    }
+
 
     .contact {
         margin: 50px 0;
         width: 100%;
-        /* Ensure full width */
     }
 
     .label,
     .input {
-        width: 100%;
         border-radius: 10px;
         padding: 11px 10px;
     }
 
     .button {
-        width: 100%;
-        height: 40px;
-        border-radius: 10px;
-        margin-top: 30px;
-        align-self: center;
-        background-color: #5ece64;
-        color: white;
-        font-weight: 500;
-        font-size: 18px;
-        border: #ccc;
-    }
-
-    .button:hover {
-        background-color: #0f5b13;
+        margin-bottom: 30px;
     }
 }
