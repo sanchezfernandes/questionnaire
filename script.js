@@ -1,13 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('form');
 
+//     const inputs = document.querySelectorAll('.input');
+//     inputs.forEach(input => {
+//         input.addEventListener('input', handleInputChange);
+//     });
+
+//     form.addEventListener('submit', handleFormSubmit);
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        typeEffect(document.getElementById('typedBanner'), "Hey there!! I'm excited to work with you", 0, () => {
+            typeEffect(document.getElementById('typedBannerMessage'), "Please take a few minutes to tell me more about you");
+        });
+    }, 2000);
+
+    const form = document.getElementById('form');
     const inputs = document.querySelectorAll('.input');
     inputs.forEach(input => {
         input.addEventListener('input', handleInputChange);
     });
-
     form.addEventListener('submit', handleFormSubmit);
 });
+
+function typeEffect(element, text, delay = 0, callback) {
+    let index = 0;
+    function addLetter() {
+        if (index < text.length) {
+            element.textContent += text[index];
+            index++;
+            setTimeout(addLetter, 100);
+        } else if (callback) {
+            callback();
+        }
+    }
+    setTimeout(addLetter, delay);
+}
 
 function handleInputChange(event) {
     const input = event.target;
