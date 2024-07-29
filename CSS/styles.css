@@ -101,13 +101,22 @@
         align-items: center;
     }
 
+    #introSection {
+        padding: 0px 15px;
+    }
+
     #banner {
         border-top: 2px solid white;
+        font-size: 30px;
+        font-weight: 600;
         color: white;
+        padding-top: 10px;
     }
 
     #bannerMessage {
         border-bottom: 2px solid white;
+        font-size: 22px;
+        font-weight: 700;
         padding-bottom: 5px;
     }
 
