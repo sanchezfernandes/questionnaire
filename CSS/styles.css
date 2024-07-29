@@ -1,0 +1,128 @@
+.mainPage {
+    background-color: rgb(149, 167, 201);
+    font-family: 'Quicksand', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Form section for all devices */
+#formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.label,
+.input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.label {
+    padding: 10px 0;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Styles for desktop */
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #formSection {
+        padding: 60px;
+        width: 55%;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+    }
+
+    #introSection {
+        width: 45%;
+    }
+
+    .pageHead {
+        margin-left: 40px;
+    }
+
+    .label,
+    .input {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mainPage {
+        background-color: bisque;
+    }
+
+    #formSection {
+        padding: 50px;
+    }
+
+    .label,
+    .input {
+        width: 70%;
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 767px) {
+    .mainPage {
+        background-color: grey;
+    }
+
+    #formSection {
+        padding: 30px;
+        width: 100%;
+        /* Ensure full width on phones */
+        align-items: center;
+    }
+
+    .contact {
+        margin: 50px 0;
+        width: 100%;
+        /* Ensure full width */
+    }
+
+    .label,
+    .input {
+        width: 100%;
+        border-radius: 10px;
+        padding: 11px 10px;
+    }
+
+    .button {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 30px;
+        align-self: center;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="mainPage">
+    <section id="introSection">
+        <h2 class="pageHead" id="banner">Excited to work with you</h2>
+        <h3 class="pageHead" id="bannerMessage">Please take a few minutes to fill out these questions</h3>
+    </section>
+    
+    <section id="formSection">
+        <form action="https://formspree.io/f/mnnajgve" method="POST" id="form">
+            <div class="contact">
+                <label class="label" for="name">Name</label>
+                <input id="name" class="input" name="name" type="text">
+        
+                <label class="label" for="email">Email</label>
+                <input id="email" class="input" type="email" name="email">
+            </div>
+    
+            <label class="label" for="q1">Can you tell me a bit about yourself and your mission?</label>
+            <textarea id="q1" class="input" name="q1" cols="40" rows="5"></textarea>
+           
+            <label class="label" for="q2">What are your primary goals with this project?</label>
+            <textarea id="q2" class="input" name="q2" cols="40" rows="5"></textarea>
+
+            <label class="label" for="q3">Who is your target audience?</label>
+            <textarea id="q3" class="input" name="q3" cols="40" rows="5"></textarea>
+
+            <label class="label" for="q4">What are some websites that you frequent and like?</label>
+            <textarea id="q4" class="input" name="q4" cols="40" rows="5"></textarea>
+
+            <label class="label" for="q5">What are some websites that you frequent and dislike?</label>
+            <textarea id="q5" class="input" name="q5" cols="40" rows="5"></textarea>
+
+            <label class="label" for="q6">How do you prefer to communicate and how often?</label>
+            <textarea id="q6" class="input" name="q6" cols="40" rows="5"></textarea>
+
+            <button class="button" type="submit">Send</button>
+        </form>
+    </section>
+   
+</body>
+</html>
