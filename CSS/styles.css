@@ -53,6 +53,11 @@
     background-color: #0f5b13;
 }
 
+.error {
+    border: 2px solid rgb(209, 71, 71);
+    background-color: rgb(234, 208, 208);
+}
+
 /* Styles for desktop */
 @media (min-width: 1024px) {
     body {

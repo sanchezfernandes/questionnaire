@@ -42,9 +42,13 @@ function handleFormSubmit(event) {
     let emptyFields = [];
 
     formData.forEach((value, key) => {
+        const inputElement = form.elements[key];
         if (!value.trim()) {
             allFieldsFilled = false;
             emptyFields.push(key);
+            inputElement.classList.add('error');
+        } else {
+            inputElement.classList.remove('error');
         }
         console.log(`${key}: ${value}`);
     });
